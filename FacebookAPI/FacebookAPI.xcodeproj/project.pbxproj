@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA7E85FF1CF5D9B60048F80A /* ConnectionUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E85FE1CF5D9B60048F80A /* ConnectionUtilTests.swift */; };
+		FA7E86021CF5F8D70048F80A /* FaceBookGroupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86011CF5F8D70048F80A /* FaceBookGroupParser.swift */; };
+		FA7E86041CF5FBF00048F80A /* FaceBookGroupParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86031CF5FBF00048F80A /* FaceBookGroupParserTests.swift */; };
+		FA8529521CF0871B00BB2166 /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8529511CF0871B00BB2166 /* CommonUtil.swift */; };
+		FA8529541CF146F000BB2166 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8529531CF146F000BB2166 /* JsonUtil.swift */; };
+		FA8529561CF148FB00BB2166 /* FaceBookAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8529551CF148FB00BB2166 /* FaceBookAPIManager.swift */; };
+		FA8529581CF1D40A00BB2166 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8529571CF1D40A00BB2166 /* ImageUtil.swift */; };
+		FAA515841CE69B65008BD102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA515831CE69B65008BD102 /* AppDelegate.swift */; };
+		FAA515861CE69B65008BD102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA515851CE69B65008BD102 /* ViewController.swift */; };
+		FAA515891CE69B65008BD102 /* FacebookAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA515871CE69B65008BD102 /* FacebookAPI.xcdatamodeld */; };
+		FAA5158B1CE69B65008BD102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA5158A1CE69B65008BD102 /* Assets.xcassets */; };
+		FAA5158E1CE69B65008BD102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA5158C1CE69B65008BD102 /* Main.storyboard */; };
+		FAA515991CE69B65008BD102 /* FacebookAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA515981CE69B65008BD102 /* FacebookAPITests.swift */; };
+		FAA515A41CE69B65008BD102 /* FacebookAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA515A31CE69B65008BD102 /* FacebookAPIUITests.swift */; };
+		FAA515B31CE69BB0008BD102 /* CoreDataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA515B21CE69BB0008BD102 /* CoreDataManagement.swift */; };
+		FAA515B91CE69C92008BD102 /* ConnectionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA515B51CE69C92008BD102 /* ConnectionUtil.swift */; };
+		FAA515BA1CE69C92008BD102 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA515B61CE69C92008BD102 /* DateUtil.swift */; };
+		FAA515BC1CE69C92008BD102 /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA515B81CE69C92008BD102 /* LogUtil.swift */; };
+		FAA515BE1CE69CC0008BD102 /* DialogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA515BD1CE69CBF008BD102 /* DialogUtil.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAA515951CE69B65008BD102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA515781CE69B65008BD102 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA5157F1CE69B65008BD102;
+			remoteInfo = FacebookAPI;
+		};
+		FAA515A01CE69B65008BD102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA515781CE69B65008BD102 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA5157F1CE69B65008BD102;
+			remoteInfo = FacebookAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA7E85FE1CF5D9B60048F80A /* ConnectionUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionUtilTests.swift; sourceTree = "<group>"; };
+		FA7E86011CF5F8D70048F80A /* FaceBookGroupParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookGroupParser.swift; sourceTree = "<group>"; };
+		FA7E86031CF5FBF00048F80A /* FaceBookGroupParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookGroupParserTests.swift; sourceTree = "<group>"; };
+		FA8529511CF0871B00BB2166 /* CommonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
+		FA8529531CF146F000BB2166 /* JsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
+		FA8529551CF148FB00BB2166 /* FaceBookAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookAPIManager.swift; sourceTree = "<group>"; };
+		FA8529571CF1D40A00BB2166 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		FAA515801CE69B65008BD102 /* FacebookAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA515831CE69B65008BD102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAA515851CE69B65008BD102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAA515881CE69B65008BD102 /* FacebookAPI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FacebookAPI.xcdatamodel; sourceTree = "<group>"; };
+		FAA5158A1CE69B65008BD102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA5158D1CE69B65008BD102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAA5158F1CE69B65008BD102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA515941CE69B65008BD102 /* FacebookAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA515981CE69B65008BD102 /* FacebookAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPITests.swift; sourceTree = "<group>"; };
+		FAA5159A1CE69B65008BD102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA5159F1CE69B65008BD102 /* FacebookAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA515A31CE69B65008BD102 /* FacebookAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIUITests.swift; sourceTree = "<group>"; };
+		FAA515A51CE69B65008BD102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA515B21CE69BB0008BD102 /* CoreDataManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManagement.swift; sourceTree = "<group>"; };
+		FAA515B51CE69C92008BD102 /* ConnectionUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionUtil.swift; sourceTree = "<group>"; };
+		FAA515B61CE69C92008BD102 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		FAA515B81CE69C92008BD102 /* LogUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
+		FAA515BD1CE69CBF008BD102 /* DialogUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogUtil.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAA5157D1CE69B65008BD102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA515911CE69B65008BD102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA5159C1CE69B65008BD102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA7E86001CF5F8C20048F80A /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				FA7E86011CF5F8D70048F80A /* FaceBookGroupParser.swift */,
+			);
+			name = Group;
+			sourceTree = "<group>";
+		};
+		FAA515771CE69B65008BD102 = {
+			isa = PBXGroup;
+			children = (
+				FAA515821CE69B65008BD102 /* FacebookAPI */,
+				FAA515971CE69B65008BD102 /* FacebookAPITests */,
+				FAA515A21CE69B65008BD102 /* FacebookAPIUITests */,
+				FAA515811CE69B65008BD102 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAA515811CE69B65008BD102 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAA515801CE69B65008BD102 /* FacebookAPI.app */,
+				FAA515941CE69B65008BD102 /* FacebookAPITests.xctest */,
+				FAA5159F1CE69B65008BD102 /* FacebookAPIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAA515821CE69B65008BD102 /* FacebookAPI */ = {
+			isa = PBXGroup;
+			children = (
+				FA7E86001CF5F8C20048F80A /* Group */,
+				FAA515B41CE69C85008BD102 /* Util */,
+				FAA515B11CE69B83008BD102 /* CoreData */,
+				FAA515831CE69B65008BD102 /* AppDelegate.swift */,
+				FAA515851CE69B65008BD102 /* ViewController.swift */,
+				FA8529551CF148FB00BB2166 /* FaceBookAPIManager.swift */,
+				FAA5158A1CE69B65008BD102 /* Assets.xcassets */,
+				FAA5158C1CE69B65008BD102 /* Main.storyboard */,
+				FAA5158F1CE69B65008BD102 /* Info.plist */,
+				FAA515871CE69B65008BD102 /* FacebookAPI.xcdatamodeld */,
+			);
+			path = FacebookAPI;
+			sourceTree = "<group>";
+		};
+		FAA515971CE69B65008BD102 /* FacebookAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAA515981CE69B65008BD102 /* FacebookAPITests.swift */,
+				FA7E85FE1CF5D9B60048F80A /* ConnectionUtilTests.swift */,
+				FA7E86031CF5FBF00048F80A /* FaceBookGroupParserTests.swift */,
+				FAA5159A1CE69B65008BD102 /* Info.plist */,
+			);
+			path = FacebookAPITests;
+			sourceTree = "<group>";
+		};
+		FAA515A21CE69B65008BD102 /* FacebookAPIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAA515A31CE69B65008BD102 /* FacebookAPIUITests.swift */,
+				FAA515A51CE69B65008BD102 /* Info.plist */,
+			);
+			path = FacebookAPIUITests;
+			sourceTree = "<group>";
+		};
+		FAA515B11CE69B83008BD102 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FAA515B21CE69BB0008BD102 /* CoreDataManagement.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		FAA515B41CE69C85008BD102 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FAA515B51CE69C92008BD102 /* ConnectionUtil.swift */,
+				FAA515BD1CE69CBF008BD102 /* DialogUtil.swift */,
+				FAA515B61CE69C92008BD102 /* DateUtil.swift */,
+				FAA515B81CE69C92008BD102 /* LogUtil.swift */,
+				FA8529511CF0871B00BB2166 /* CommonUtil.swift */,
+				FA8529531CF146F000BB2166 /* JsonUtil.swift */,
+				FA8529571CF1D40A00BB2166 /* ImageUtil.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAA5157F1CE69B65008BD102 /* FacebookAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA515A81CE69B65008BD102 /* Build configuration list for PBXNativeTarget "FacebookAPI" */;
+			buildPhases = (
+				FAA5157C1CE69B65008BD102 /* Sources */,
+				FAA5157D1CE69B65008BD102 /* Frameworks */,
+				FAA5157E1CE69B65008BD102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FacebookAPI;
+			productName = FacebookAPI;
+			productReference = FAA515801CE69B65008BD102 /* FacebookAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAA515931CE69B65008BD102 /* FacebookAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA515AB1CE69B65008BD102 /* Build configuration list for PBXNativeTarget "FacebookAPITests" */;
+			buildPhases = (
+				FAA515901CE69B65008BD102 /* Sources */,
+				FAA515911CE69B65008BD102 /* Frameworks */,
+				FAA515921CE69B65008BD102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAA515961CE69B65008BD102 /* PBXTargetDependency */,
+			);
+			name = FacebookAPITests;
+			productName = FacebookAPITests;
+			productReference = FAA515941CE69B65008BD102 /* FacebookAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAA5159E1CE69B65008BD102 /* FacebookAPIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA515AE1CE69B65008BD102 /* Build configuration list for PBXNativeTarget "FacebookAPIUITests" */;
+			buildPhases = (
+				FAA5159B1CE69B65008BD102 /* Sources */,
+				FAA5159C1CE69B65008BD102 /* Frameworks */,
+				FAA5159D1CE69B65008BD102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAA515A11CE69B65008BD102 /* PBXTargetDependency */,
+			);
+			name = FacebookAPIUITests;
+			productName = FacebookAPIUITests;
+			productReference = FAA5159F1CE69B65008BD102 /* FacebookAPIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAA515781CE69B65008BD102 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = yuya;
+				TargetAttributes = {
+					FAA5157F1CE69B65008BD102 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					FAA515931CE69B65008BD102 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = FAA5157F1CE69B65008BD102;
+					};
+					FAA5159E1CE69B65008BD102 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = FAA5157F1CE69B65008BD102;
+					};
+				};
+			};
+			buildConfigurationList = FAA5157B1CE69B65008BD102 /* Build configuration list for PBXProject "FacebookAPI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAA515771CE69B65008BD102;
+			productRefGroup = FAA515811CE69B65008BD102 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAA5157F1CE69B65008BD102 /* FacebookAPI */,
+				FAA515931CE69B65008BD102 /* FacebookAPITests */,
+				FAA5159E1CE69B65008BD102 /* FacebookAPIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAA5157E1CE69B65008BD102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA5158B1CE69B65008BD102 /* Assets.xcassets in Resources */,
+				FAA5158E1CE69B65008BD102 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA515921CE69B65008BD102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA5159D1CE69B65008BD102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAA5157C1CE69B65008BD102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA515BC1CE69C92008BD102 /* LogUtil.swift in Sources */,
+				FAA515BE1CE69CC0008BD102 /* DialogUtil.swift in Sources */,
+				FA8529561CF148FB00BB2166 /* FaceBookAPIManager.swift in Sources */,
+				FA8529581CF1D40A00BB2166 /* ImageUtil.swift in Sources */,
+				FAA515861CE69B65008BD102 /* ViewController.swift in Sources */,
+				FAA515841CE69B65008BD102 /* AppDelegate.swift in Sources */,
+				FAA515B91CE69C92008BD102 /* ConnectionUtil.swift in Sources */,
+				FA8529521CF0871B00BB2166 /* CommonUtil.swift in Sources */,
+				FAA515BA1CE69C92008BD102 /* DateUtil.swift in Sources */,
+				FAA515891CE69B65008BD102 /* FacebookAPI.xcdatamodeld in Sources */,
+				FAA515B31CE69BB0008BD102 /* CoreDataManagement.swift in Sources */,
+				FA8529541CF146F000BB2166 /* JsonUtil.swift in Sources */,
+				FA7E86021CF5F8D70048F80A /* FaceBookGroupParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA515901CE69B65008BD102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7E86041CF5FBF00048F80A /* FaceBookGroupParserTests.swift in Sources */,
+				FAA515991CE69B65008BD102 /* FacebookAPITests.swift in Sources */,
+				FA7E85FF1CF5D9B60048F80A /* ConnectionUtilTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA5159B1CE69B65008BD102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA515A41CE69B65008BD102 /* FacebookAPIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAA515961CE69B65008BD102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA5157F1CE69B65008BD102 /* FacebookAPI */;
+			targetProxy = FAA515951CE69B65008BD102 /* PBXContainerItemProxy */;
+		};
+		FAA515A11CE69B65008BD102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA5157F1CE69B65008BD102 /* FacebookAPI */;
+			targetProxy = FAA515A01CE69B65008BD102 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAA5158C1CE69B65008BD102 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA5158D1CE69B65008BD102 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAA515A61CE69B65008BD102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAA515A71CE69B65008BD102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FAA515A91CE69B65008BD102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FacebookAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.FacebookAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FAA515AA1CE69B65008BD102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FacebookAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.FacebookAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FAA515AC1CE69B65008BD102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FacebookAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.FacebookAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacebookAPI.app/Contents/MacOS/FacebookAPI";
+			};
+			name = Debug;
+		};
+		FAA515AD1CE69B65008BD102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FacebookAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.FacebookAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacebookAPI.app/Contents/MacOS/FacebookAPI";
+			};
+			name = Release;
+		};
+		FAA515AF1CE69B65008BD102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FacebookAPIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.FacebookAPIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FacebookAPI;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FAA515B01CE69B65008BD102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FacebookAPIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ky.FacebookAPIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FacebookAPI;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAA5157B1CE69B65008BD102 /* Build configuration list for PBXProject "FacebookAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA515A61CE69B65008BD102 /* Debug */,
+				FAA515A71CE69B65008BD102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA515A81CE69B65008BD102 /* Build configuration list for PBXNativeTarget "FacebookAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA515A91CE69B65008BD102 /* Debug */,
+				FAA515AA1CE69B65008BD102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA515AB1CE69B65008BD102 /* Build configuration list for PBXNativeTarget "FacebookAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA515AC1CE69B65008BD102 /* Debug */,
+				FAA515AD1CE69B65008BD102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA515AE1CE69B65008BD102 /* Build configuration list for PBXNativeTarget "FacebookAPIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA515AF1CE69B65008BD102 /* Debug */,
+				FAA515B01CE69B65008BD102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAA515871CE69B65008BD102 /* FacebookAPI.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAA515881CE69B65008BD102 /* FacebookAPI.xcdatamodel */,
+			);
+			currentVersion = FAA515881CE69B65008BD102 /* FacebookAPI.xcdatamodel */;
+			path = FacebookAPI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FAA515781CE69B65008BD102 /* Project object */;
+}
