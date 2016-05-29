@@ -20,7 +20,7 @@ enum ConnectionError:ErrorType{
 class ConnectionUtil{
     
     deinit{
-        LogUtil.log()
+        LogUtil.log(url)
         // セッションを削除してあげないとメモリリークが発生する
         session?.invalidateAndCancel()
     }

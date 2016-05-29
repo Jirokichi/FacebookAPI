@@ -24,7 +24,7 @@ class FaceBookGroupParserTests: XCTestCase {
     func test00(){
         let expectation = expectationWithDescription("")
         
-        let api = FaceBookGroupParser(accessToken:FacebookAPITests.SharedAccessToken)
+        let api = FBGroupListParser(accessToken:FacebookAPITests.SharedAccessToken)
         api.startAPICall { (result, error) -> () in
             XCTAssertNil(error)
             XCTAssertNotNil(result)

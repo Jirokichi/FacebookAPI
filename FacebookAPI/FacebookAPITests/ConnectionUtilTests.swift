@@ -57,7 +57,7 @@ class ConnectionUtilTests: XCTestCase {
                 do{
                     let fileName = "sample.pdf"
                     LogUtil.log(fileName)
-                    try ImageUtil.saveData(data, fileName: fileName)
+                    try FileUtil(folderName: ["test01_LargeFile"]).saveData(data, fileName: fileName)
                 }catch{
                     XCTAssertNil(error)
                 }
@@ -83,7 +83,7 @@ class ConnectionUtilTests: XCTestCase {
                 do{
                     let fileName = "sample_cancel.pdf"
                     LogUtil.log(fileName)
-                    try ImageUtil.saveData(data, fileName: fileName)
+                    try FileUtil(folderName: ["test02_LargeFile_Cancel"]).saveData(data, fileName: fileName)
                 }catch{
                     XCTAssertNil(error)
                 }

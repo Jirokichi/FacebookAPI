@@ -14,7 +14,7 @@ class FacebookAPITests: XCTestCase {
     
     
     
-    static let SharedAccessToken = "EAAKkj1obEnwBAPZAJNKWQMJnrKbc3GZC8ykoGSRiwC1Uod4sMNfTZB93ExTPMZAPvHReYvuQXRq2ZAjk3AavbPDEbAWrfPfMszuQZBzdZCG1nYX5YFOW2VpXMRNqwHmncLyp4w5vhvRY06vvGVj9UQom7ZBPBU0fOEQZD"
+    static let SharedAccessToken = ""
     
     override func setUp() {
         super.setUp()
@@ -219,9 +219,9 @@ class FacebookAPITests: XCTestCase {
         let expectation = expectationWithDescription("")
     
         
-        let imageUtil = ImageUtil(imagesInfo: [("https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/13245280_266185977065641_4080831858092387733_n.jpg?oh=583c69d5c633b2ef56a1ba15f0a9398f&oe=57D4AC9F", "13245280_266185977065641_4080831858092387733_n.jpg")])
+        let fileDownloader = FileDownloader(imagesInfo: [("https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/13245280_266185977065641_4080831858092387733_n.jpg?oh=583c69d5c633b2ef56a1ba15f0a9398f&oe=57D4AC9F", "13245280_266185977065641_4080831858092387733_n.jpg")], folderName: ["test"])
         
-        imageUtil.getDataFromApi { (error) -> () in
+        fileDownloader.getDataFromApi { (error) -> () in
             XCTAssertNil(error)
             LogUtil.log(error)
             expectation.fulfill()
