@@ -60,8 +60,8 @@ class FaceBookAPIManager{
         
         
         self.connection?.call() { (data:NSData?, response:NSURLResponse?, error:ErrorType?) -> () in
+            var apiError:ErrorType? = error
             if let data = data{
-                var apiError:ErrorType? = nil
                 do{
                     
                     let object = try JsonUtil.getJsonObject(data)
@@ -82,8 +82,8 @@ class FaceBookAPIManager{
                 }catch{
                     apiError = error
                 }
-                completionHandler(dict: [:], error: apiError)
             }
+            completionHandler(dict: [:], error: apiError)
         }
 
     }

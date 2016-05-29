@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FA7E85FF1CF5D9B60048F80A /* ConnectionUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E85FE1CF5D9B60048F80A /* ConnectionUtilTests.swift */; };
-		FA7E86021CF5F8D70048F80A /* FaceBookGroupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86011CF5F8D70048F80A /* FaceBookGroupParser.swift */; };
+		FA7E86021CF5F8D70048F80A /* FBGroupListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86011CF5F8D70048F80A /* FBGroupListParser.swift */; };
 		FA7E86041CF5FBF00048F80A /* FaceBookGroupParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86031CF5FBF00048F80A /* FaceBookGroupParserTests.swift */; };
+		FA7E86061CF9479E0048F80A /* ThreadUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86051CF9479E0048F80A /* ThreadUtil.swift */; };
+		FA7E86081CF983D70048F80A /* FBGroupMessageListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86071CF983D70048F80A /* FBGroupMessageListParser.swift */; };
+		FA7E860A1CF98D8D0048F80A /* FBGroupMessageListParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86091CF98D8D0048F80A /* FBGroupMessageListParserTests.swift */; };
+		FA7E860C1CF9B15C0048F80A /* FBGroupMessageImageListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E860B1CF9B15C0048F80A /* FBGroupMessageImageListParser.swift */; };
+		FA7E860E1CFAED010048F80A /* FBGroupMessageImageListParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E860D1CFAED010048F80A /* FBGroupMessageImageListParserTests.swift */; };
 		FA8529521CF0871B00BB2166 /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8529511CF0871B00BB2166 /* CommonUtil.swift */; };
 		FA8529541CF146F000BB2166 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8529531CF146F000BB2166 /* JsonUtil.swift */; };
 		FA8529561CF148FB00BB2166 /* FaceBookAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8529551CF148FB00BB2166 /* FaceBookAPIManager.swift */; };
@@ -47,8 +52,13 @@
 
 /* Begin PBXFileReference section */
 		FA7E85FE1CF5D9B60048F80A /* ConnectionUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionUtilTests.swift; sourceTree = "<group>"; };
-		FA7E86011CF5F8D70048F80A /* FaceBookGroupParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookGroupParser.swift; sourceTree = "<group>"; };
+		FA7E86011CF5F8D70048F80A /* FBGroupListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBGroupListParser.swift; sourceTree = "<group>"; };
 		FA7E86031CF5FBF00048F80A /* FaceBookGroupParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookGroupParserTests.swift; sourceTree = "<group>"; };
+		FA7E86051CF9479E0048F80A /* ThreadUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadUtil.swift; sourceTree = "<group>"; };
+		FA7E86071CF983D70048F80A /* FBGroupMessageListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBGroupMessageListParser.swift; sourceTree = "<group>"; };
+		FA7E86091CF98D8D0048F80A /* FBGroupMessageListParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBGroupMessageListParserTests.swift; sourceTree = "<group>"; };
+		FA7E860B1CF9B15C0048F80A /* FBGroupMessageImageListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBGroupMessageImageListParser.swift; sourceTree = "<group>"; };
+		FA7E860D1CFAED010048F80A /* FBGroupMessageImageListParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBGroupMessageImageListParserTests.swift; sourceTree = "<group>"; };
 		FA8529511CF0871B00BB2166 /* CommonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
 		FA8529531CF146F000BB2166 /* JsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
 		FA8529551CF148FB00BB2166 /* FaceBookAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookAPIManager.swift; sourceTree = "<group>"; };
@@ -98,12 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA7E86001CF5F8C20048F80A /* Group */ = {
+		FA7E86001CF5F8C20048F80A /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				FA7E86011CF5F8D70048F80A /* FaceBookGroupParser.swift */,
+				FA7E86011CF5F8D70048F80A /* FBGroupListParser.swift */,
+				FA7E86071CF983D70048F80A /* FBGroupMessageListParser.swift */,
+				FA7E860B1CF9B15C0048F80A /* FBGroupMessageImageListParser.swift */,
 			);
-			name = Group;
+			name = Parser;
 			sourceTree = "<group>";
 		};
 		FAA515771CE69B65008BD102 = {
@@ -129,7 +141,7 @@
 		FAA515821CE69B65008BD102 /* FacebookAPI */ = {
 			isa = PBXGroup;
 			children = (
-				FA7E86001CF5F8C20048F80A /* Group */,
+				FA7E86001CF5F8C20048F80A /* Parser */,
 				FAA515B41CE69C85008BD102 /* Util */,
 				FAA515B11CE69B83008BD102 /* CoreData */,
 				FAA515831CE69B65008BD102 /* AppDelegate.swift */,
@@ -149,6 +161,8 @@
 				FAA515981CE69B65008BD102 /* FacebookAPITests.swift */,
 				FA7E85FE1CF5D9B60048F80A /* ConnectionUtilTests.swift */,
 				FA7E86031CF5FBF00048F80A /* FaceBookGroupParserTests.swift */,
+				FA7E86091CF98D8D0048F80A /* FBGroupMessageListParserTests.swift */,
+				FA7E860D1CFAED010048F80A /* FBGroupMessageImageListParserTests.swift */,
 				FAA5159A1CE69B65008BD102 /* Info.plist */,
 			);
 			path = FacebookAPITests;
@@ -174,6 +188,7 @@
 		FAA515B41CE69C85008BD102 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				FA7E86051CF9479E0048F80A /* ThreadUtil.swift */,
 				FAA515B51CE69C92008BD102 /* ConnectionUtil.swift */,
 				FAA515BD1CE69CBF008BD102 /* DialogUtil.swift */,
 				FAA515B61CE69C92008BD102 /* DateUtil.swift */,
@@ -316,8 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA515BC1CE69C92008BD102 /* LogUtil.swift in Sources */,
+				FA7E86061CF9479E0048F80A /* ThreadUtil.swift in Sources */,
 				FAA515BE1CE69CC0008BD102 /* DialogUtil.swift in Sources */,
 				FA8529561CF148FB00BB2166 /* FaceBookAPIManager.swift in Sources */,
+				FA7E860C1CF9B15C0048F80A /* FBGroupMessageImageListParser.swift in Sources */,
 				FA8529581CF1D40A00BB2166 /* ImageUtil.swift in Sources */,
 				FAA515861CE69B65008BD102 /* ViewController.swift in Sources */,
 				FAA515841CE69B65008BD102 /* AppDelegate.swift in Sources */,
@@ -326,8 +343,9 @@
 				FAA515BA1CE69C92008BD102 /* DateUtil.swift in Sources */,
 				FAA515891CE69B65008BD102 /* FacebookAPI.xcdatamodeld in Sources */,
 				FAA515B31CE69BB0008BD102 /* CoreDataManagement.swift in Sources */,
+				FA7E86081CF983D70048F80A /* FBGroupMessageListParser.swift in Sources */,
 				FA8529541CF146F000BB2166 /* JsonUtil.swift in Sources */,
-				FA7E86021CF5F8D70048F80A /* FaceBookGroupParser.swift in Sources */,
+				FA7E86021CF5F8D70048F80A /* FBGroupListParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +353,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7E860A1CF98D8D0048F80A /* FBGroupMessageListParserTests.swift in Sources */,
 				FA7E86041CF5FBF00048F80A /* FaceBookGroupParserTests.swift in Sources */,
+				FA7E860E1CFAED010048F80A /* FBGroupMessageImageListParserTests.swift in Sources */,
 				FAA515991CE69B65008BD102 /* FacebookAPITests.swift in Sources */,
 				FA7E85FF1CF5D9B60048F80A /* ConnectionUtilTests.swift in Sources */,
 			);

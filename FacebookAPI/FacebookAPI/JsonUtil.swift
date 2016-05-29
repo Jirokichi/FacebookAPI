@@ -15,6 +15,11 @@ struct JsonUtil{
         return object
     }
     
+    static func getJsonData(dict:NSDictionary) throws -> NSData{
+        let jsonData = try NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions.init(rawValue: 2)) //(*)options??
+        return jsonData
+    }
+    
 //    static func castToDictionary(object:AnyObject, defaultValue:NSDictionary = [:]) -> NSDictionary{
 //        if object is NSDictionary{
 //            return object as! NSDictionary

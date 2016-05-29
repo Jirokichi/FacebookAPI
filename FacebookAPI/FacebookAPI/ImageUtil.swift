@@ -58,14 +58,25 @@ struct ImageUtil{
         }
     }
     
-    static func saveData(data: NSData?, fileName:String) throws{
+    static func saveData(data: NSData?, fileName:String, overWrite:Bool = false) throws{
         let folderPath = try ImageUtil.getFolderPath()
         let path =  folderPath + "/" + fileName
-        let success = data?.writeToFile(path, atomically: true)
+        let success:Bool
+        if isFile(path) && !overWrite{
+            success = true
+        }else{
+            success = data?.writeToFile(path, atomically: true) ?? false
+        }
         //@Action Fix
-        if !(success!) {
+        if !(success) {
             throw FileError.ImageFileSaveError
         }
+    }
+    
+    static func isFile(fullPath:String) -> Bool{
+        var isDir : ObjCBool = false
+        let fileManager = NSFileManager.defaultManager()
+        return fileManager.fileExistsAtPath(fullPath, isDirectory: &isDir)
     }
     
     /// 利用するフォルダーのパスを取得する関数。存在しない場合は作成する。作成に失敗した場合はエラーを返す
