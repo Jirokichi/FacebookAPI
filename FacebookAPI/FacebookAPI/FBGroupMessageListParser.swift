@@ -17,12 +17,12 @@ struct FBMessage{
     let fromUser:(name:String, id:String, url:String)
     
     /// メッセージがある場合のみファイルを作成
-    func createFile(folderName:[String], overWrite:Bool = false) throws{
+    func createFile(folderName:[String], imagesFileName:[String], overWrite:Bool = false) throws{
         if let message = self.message{
             let dict = [
                 "message":message as NSString,
                 "id":self.messageId as NSString,
-                "hasPicture":self.hasPicture as NSNumber,
+                "pictures":imagesFileName as NSArray,
                 "createdTime":"\(self.createdTime.timeIntervalSince1970)" as NSString,
                 "userName":self.fromUser.name as NSString,
                 "userId":self.fromUser.id as NSString,

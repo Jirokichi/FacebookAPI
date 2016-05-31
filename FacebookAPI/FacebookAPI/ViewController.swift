@@ -170,15 +170,8 @@ class ViewController: NSViewController {
     /// 画像URLリストのダウンロード
     private func callFBGroupMessageImageListParser(messages:[FBMessage], group:FBGroup, accessToken:String){
         
-        messages.forEach({ (fbmsg) -> () in
-            do{
-                try fbmsg.createFile([ViewController.FolderName + "_" + group.groupId, "Messages"])
-            }catch{
-                LogUtil.log(error)
-                LogUtil.log(fbmsg.messageId)
-            }
-        })
-        LogUtil.log("一回目のメッセージを保存しました。続けて画像URLのダウンロードを開始します")
+        
+        LogUtil.log("一回目のメッセージを取得しました（保存は後で）。続けて画像URLのダウンロードを開始します")
         var msgIdWithImage:[String] = []
         messages.forEach({ (fbmsg) -> () in
             if fbmsg.hasPicture{
@@ -193,13 +186,13 @@ class ViewController: NSViewController {
             if let error = error{
                 self.processInFail(error)
             }else{
-                self.callFileDownloader(group, pictures: result)
+                self.callFileDownloader(group, messages: messages, pictures: result)
             }
         }
     }
     
     /// 画像のダウンロード
-    private func callFileDownloader(group:FBGroup, pictures:[FBPicture]){
+    private func callFileDownloader(group:FBGroup, messages:[FBMessage], pictures:[FBPicture]){
         var imagesInfo:[(url: String, fileName: String)] = []
         for picture in pictures{
             var num = 0
@@ -208,11 +201,30 @@ class ViewController: NSViewController {
                 num = num + 1
             }
         }
-        let imageApi = FileDownloader(imagesInfo: imagesInfo, folderName: [ViewController.FolderName + "_" + group.groupName, "Images"])
+        let imageApi = FileDownloader(imagesInfo: imagesInfo, folderName: [ViewController.FolderName + "_" + group.groupId, "Images"])
         imageApi.getDataFromApi({ (error) -> () in
             if let error = error{
                 self.processInFail(error)
             }else{
+                // メッセージの保存
+                messages.forEach({ (fbmsg) -> () in
+                    do{
+                        
+                        // 対応するファイルパスを取得
+                        var imagesFileName:[String] = []
+                        for imageInfo:(url: String, fileName: String) in imagesInfo{
+                            if imageInfo.fileName.containsString(fbmsg.messageId){
+                                imagesFileName.append(imageInfo.fileName)
+                            }
+                        }
+                        
+                        try fbmsg.createFile([ViewController.FolderName + "_" + group.groupId, "Messages"], imagesFileName: imagesFileName)
+                    }catch{
+                        LogUtil.log(error)
+                        LogUtil.log(fbmsg.messageId)
+                    }
+                })
+                
                 // 同期フラグが立っている限り続ける
                 if self.isSync{
                     ThreadUtil.dipatch_async_main({ () -> () in
