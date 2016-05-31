@@ -60,8 +60,6 @@ class ConnectionUtil{
     func call(completionHandler: (data:NSData?, response:NSURLResponse?, error:ErrorType?) -> ()){
         
         let requestURL = self.createRequestURL()
-        
-        
         isWorking = true
         self.task = session?.dataTaskWithRequest(requestURL, completionHandler:{(data, response, error) in
             defer{
@@ -69,15 +67,11 @@ class ConnectionUtil{
                 // セッションを削除してあげないとメモリリークが発生する
                 self.session?.invalidateAndCancel()
             }
-            
             if let error = error as? NSURLError where error.rawValue == NSURLErrorCancelled{
                 completionHandler(data: data, response:response, error: ConnectionError.Cancel)
             }else{
                 completionHandler(data: data, response:response, error: error)
             }
-            
-            
-            
         })
         self.task?.resume()
     }
@@ -113,7 +107,7 @@ class ConnectionUtil{
             requestURL.HTTPMethod = self.method.rawValue
             requestURL.setValue("Content-Type", forHTTPHeaderField: self.contetnType.rawValue)
         }
-        LogUtil.log("\(url):\(paramString)" )
+        LogUtil.log("\(url)\(method == .Post ? (":" + paramString) : (""))")
         return requestURL
     }
 }

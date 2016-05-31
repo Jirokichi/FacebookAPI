@@ -30,7 +30,7 @@ struct FBPicture{
     }
 }
 
-class FBGroupMessageImageListParser{
+class FBGroupMessageImageListParser: FBParser{
     private struct JsonKey{
         static let Data = "data"
         static let Attachments = "subattachments"
@@ -40,12 +40,12 @@ class FBGroupMessageImageListParser{
         static let AttachmentsUrl = "src"
     }
     
-    var facebookAPI:FaceBookAPIManager?
     private let msgIds:[String]
     private let params:[String:String]
     init(msgIds:[String], accessToken:String){
         self.msgIds = msgIds
         self.params = ["access_token":accessToken]
+        super.init(facebookAPI: nil)
     }
     
     private func updateFaceBoolAPI(msgId:String){

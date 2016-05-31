@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA723EA01CFD9FCB00DE0975 /* FBParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA723E9F1CFD9FCB00DE0975 /* FBParser.swift */; };
 		FA7E85FF1CF5D9B60048F80A /* ConnectionUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E85FE1CF5D9B60048F80A /* ConnectionUtilTests.swift */; };
 		FA7E86021CF5F8D70048F80A /* FBGroupListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86011CF5F8D70048F80A /* FBGroupListParser.swift */; };
 		FA7E86041CF5FBF00048F80A /* FaceBookGroupParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E86031CF5FBF00048F80A /* FaceBookGroupParserTests.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA723E9F1CFD9FCB00DE0975 /* FBParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBParser.swift; sourceTree = "<group>"; };
 		FA7E85FE1CF5D9B60048F80A /* ConnectionUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionUtilTests.swift; sourceTree = "<group>"; };
 		FA7E86011CF5F8D70048F80A /* FBGroupListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBGroupListParser.swift; sourceTree = "<group>"; };
 		FA7E86031CF5FBF00048F80A /* FaceBookGroupParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookGroupParserTests.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				FA7E86011CF5F8D70048F80A /* FBGroupListParser.swift */,
 				FA7E86071CF983D70048F80A /* FBGroupMessageListParser.swift */,
 				FA7E860B1CF9B15C0048F80A /* FBGroupMessageImageListParser.swift */,
+				FA723E9F1CFD9FCB00DE0975 /* FBParser.swift */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				FAA515B31CE69BB0008BD102 /* CoreDataManagement.swift in Sources */,
 				FA7E86081CF983D70048F80A /* FBGroupMessageListParser.swift in Sources */,
 				FA8529541CF146F000BB2166 /* JsonUtil.swift in Sources */,
+				FA723EA01CFD9FCB00DE0975 /* FBParser.swift in Sources */,
 				FA7E86021CF5F8D70048F80A /* FBGroupListParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

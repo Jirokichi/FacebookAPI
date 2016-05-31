@@ -35,7 +35,7 @@ enum GroupPrivacy:String{
     }
 }
 
-class FBGroupListParser{
+class FBGroupListParser: FBParser{
     private struct JsonKey{
         static let Data = "data"
         static let DataName = "name"
@@ -46,15 +46,13 @@ class FBGroupListParser{
     }
     
     
-    let facebookAPI:FaceBookAPIManager
-    
     init(accessToken:String){
         let params = ["access_token":accessToken, "fields":"data,name,id,owner,privacy"]
-        facebookAPI = FaceBookAPIManager(node: "me", edge: "groups", params: params)
+        super.init(facebookAPI: FaceBookAPIManager(node: "me", edge: "groups", params: params))
     }
     
     func startAPICall(completionHandler:(result:[FBGroup], error:ErrorType?)->()){
-        facebookAPI.startAPICall { (dict, error) -> () in
+        facebookAPI?.startAPICall { (dict, error) -> () in
             
             var result:[FBGroup] = []
             if let dataArray = dict[JsonKey.Data] as? NSArray{

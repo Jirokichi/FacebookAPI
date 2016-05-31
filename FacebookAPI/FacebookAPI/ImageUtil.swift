@@ -42,6 +42,11 @@ struct FileUtil{
         }
     }
     
+    func isFileUnderTheFolder(fileName:String) throws -> Bool{
+        let folderPath = try self.getFolderPath()
+        let path =  folderPath + "/" + fileName
+        return FileUtil.isFile(path)
+    }
 
     
     /// 利用するフォルダーのパスを取得する関数。存在しない場合は作成する。作成に失敗した場合はエラーを返す
