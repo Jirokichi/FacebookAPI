@@ -18,22 +18,22 @@ struct FBMessage{
     
     /// メッセージがある場合のみファイルを作成
     func createFile(folderName:[String], imagesFileName:[String], overWrite:Bool = false) throws{
-        if let message = self.message{
-            let dict = [
-                "message":message as NSString,
-                "id":self.messageId as NSString,
-                "pictures":imagesFileName as NSArray,
-                "createdTime":"\(self.createdTime.timeIntervalSince1970)" as NSString,
-                "userName":self.fromUser.name as NSString,
-                "userId":self.fromUser.id as NSString,
-                "userImageUrl":self.fromUser.url as NSString
-            ]
-            
-            LogUtil.log()
-            let fileName = "\(self.messageId)_\(hasPicture).json"
-            let data = try JsonUtil.getJsonData(dict)
-            try FileUtil(folderName: folderName).saveData(data, fileName: fileName, overWrite:overWrite)
-        }
+        let message = self.message ?? ""
+        let dict = [
+            "message":message as NSString,
+            "id":self.messageId as NSString,
+            "pictures":imagesFileName as NSArray,
+            "createdTime":"\(self.createdTime.timeIntervalSince1970)" as NSString,
+            "userName":self.fromUser.name as NSString,
+            "userId":self.fromUser.id as NSString,
+            "userImageUrl":self.fromUser.url as NSString
+        ]
+        
+        LogUtil.log()
+        let fileName = "\(self.messageId)_\(hasPicture).json"
+        let data = try JsonUtil.getJsonData(dict)
+        try FileUtil(folderName: folderName).saveData(data, fileName: fileName, overWrite:overWrite)
+        
     }
     
 }
