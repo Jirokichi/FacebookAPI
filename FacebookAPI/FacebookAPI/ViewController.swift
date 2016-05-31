@@ -172,7 +172,7 @@ class ViewController: NSViewController {
         
         messages.forEach({ (fbmsg) -> () in
             do{
-                try fbmsg.createFile([ViewController.FolderName + "_" + group.groupName, "Messages"])
+                try fbmsg.createFile([ViewController.FolderName + "_" + group.groupId, "Messages"])
             }catch{
                 LogUtil.log(error)
                 LogUtil.log(fbmsg.messageId)
