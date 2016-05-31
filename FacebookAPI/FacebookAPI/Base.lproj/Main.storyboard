@@ -785,9 +785,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="accessTokenTextField" destination="Eve-tc-njH" id="lZo-jw-nhK"/>
+                        <outlet property="accessTokenTextField" destination="Eve-tc-njH" id="ZHK-XO-9vz"/>
                         <outlet property="groupPopUpButton" destination="xmp-PW-fy8" id="S0C-YD-Bmj"/>
                         <outlet property="resultTextField" destination="KV4-Oy-jMK" id="fnO-W6-YJi"/>
+                        <outlet property="updateButton" destination="SaU-7Q-kYi" id="ag7-6k-Sqa"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

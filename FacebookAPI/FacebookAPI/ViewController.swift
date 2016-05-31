@@ -22,6 +22,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var accessTokenTextField: NSTextField!
     @IBOutlet weak var resultTextField: NSTextField!
     
+    @IBOutlet weak var updateButton: NSButton!
+    
     private var groups:[FBGroup]? = nil
     
     override func viewDidLoad() {
@@ -120,6 +122,14 @@ class ViewController: NSViewController {
             if let index = index{
                 let group = groups[index]
                 LogUtil.log(group)
+                
+                self.groupPopUpButton.enabled = false
+                self.accessTokenTextField.enabled = false
+                self.updateButton.enabled = false
+                self.resultTextField.hidden = false
+                self.resultTextField.stringValue = "データ初回同期中..."
+                self.isSync = true
+                
                 self.startSyncForGroup(group)
             }
         }
@@ -128,6 +138,9 @@ class ViewController: NSViewController {
     private func processInFail(error:ErrorType){
         ThreadUtil.dipatch_async_main({ () -> () in
             DialogUtil.startDialog("同期失敗", message: "\(error)", onClickOKButton: { () -> () in })
+            self.groupPopUpButton.enabled = true
+            self.accessTokenTextField.enabled = true
+            self.updateButton.enabled = true
             self.resultTextField.hidden = true
             self.resultTextField.stringValue = ""
         })
@@ -135,10 +148,7 @@ class ViewController: NSViewController {
     }
     
     private func startSyncForGroup(group:FBGroup){
-        self.isSync = true
         let accessToken = self.accessTokenTextField.stringValue
-        resultTextField.hidden = false
-        resultTextField.stringValue = "データ同期中..."
         self.callFBGroupMessageListParser(group, accessToken: accessToken)
     }
     
@@ -155,34 +165,7 @@ class ViewController: NSViewController {
         }
     }
     
-//    /// ユーザー画像のダウンロード
-//    private func callFileDownloaderForUserImages(messages:[FBMessage], group:FBGroup, accessToken:String){
-//        
-//        let folderName = [ViewController.FolderName + "_" + group.groupName, "UserImages"]
-//        var imagesInfo:[(url: String, fileName: String)] = []
-//        for message in messages{
-//            let fileName = message.fromUser.id + ".jpg"
-//            
-//            do{
-//                let fileUtil = FileUtil(folderName: folderName)
-//                if !(try fileUtil.isFileUnderTheFolder(fileName)){
-//                    imagesInfo.append((message.fromUser.url, fileName))
-//                }
-//            }catch{
-//                
-//            }
-//        }
-//        
-//        let imageApi = FileDownloader(imagesInfo: imagesInfo, folderName: folderName)
-//        imageApi.getDataFromApi({ (error) -> () in
-//            if let error = error{
-//                self.processInFail(error)
-//            }else{
-//                self.callFBGroupMessageImageListParser(messages, group:group, accessToken: accessToken)
-//            }
-//        })
-//
-//    }
+
     
     /// 画像URLリストのダウンロード
     private func callFBGroupMessageImageListParser(messages:[FBMessage], group:FBGroup, accessToken:String){
@@ -230,13 +213,27 @@ class ViewController: NSViewController {
             if let error = error{
                 self.processInFail(error)
             }else{
-                ThreadUtil.dipatch_async_main({ () -> () in
-                    DialogUtil.startDialog("同期完了", onClickOKButton: { () -> () in
+                // 同期フラグが立っている限り続ける
+                if self.isSync{
+                    ThreadUtil.dipatch_async_main({ () -> () in
+                        let dateString = DateUtil.getDateString_YYYYMM(NSDate(), format: "YYYY/MM/dd HH:mm:s")
+                        self.resultTextField.stringValue = "最終同期時刻 - " + dateString
                     })
-                    self.isSync = false
-                    self.resultTextField.hidden = true
-                    self.resultTextField.stringValue = ""
-                })
+                    sleep(30)
+                    self.startSyncForGroup(group)
+                }else{
+                    ThreadUtil.dipatch_async_main({ () -> () in
+                        DialogUtil.startDialog("同期を停止しました", onClickOKButton: { () -> () in
+                        })
+                        self.groupPopUpButton.enabled = true
+                        self.groupPopUpButton.enabled = true
+                        self.accessTokenTextField.enabled = true
+                        self.isSync = false
+                        self.resultTextField.hidden = true
+                        self.resultTextField.stringValue = ""
+                    })
+                }
+                
             }
         })
     }
@@ -245,5 +242,38 @@ class ViewController: NSViewController {
     private func saveAccessToken(accessToken:String){
         NSUserDefaults.standardUserDefaults().setObject(accessToken, forKey: ViewController.UserDefaultKey.AccessToken)
     }
+    
+    
+    
+    
+    
+    //    /// ユーザー画像のダウンロード
+    //    private func callFileDownloaderForUserImages(messages:[FBMessage], group:FBGroup, accessToken:String){
+    //
+    //        let folderName = [ViewController.FolderName + "_" + group.groupName, "UserImages"]
+    //        var imagesInfo:[(url: String, fileName: String)] = []
+    //        for message in messages{
+    //            let fileName = message.fromUser.id + ".jpg"
+    //
+    //            do{
+    //                let fileUtil = FileUtil(folderName: folderName)
+    //                if !(try fileUtil.isFileUnderTheFolder(fileName)){
+    //                    imagesInfo.append((message.fromUser.url, fileName))
+    //                }
+    //            }catch{
+    //
+    //            }
+    //        }
+    //
+    //        let imageApi = FileDownloader(imagesInfo: imagesInfo, folderName: folderName)
+    //        imageApi.getDataFromApi({ (error) -> () in
+    //            if let error = error{
+    //                self.processInFail(error)
+    //            }else{
+    //                self.callFBGroupMessageImageListParser(messages, group:group, accessToken: accessToken)
+    //            }
+    //        })
+    //
+    //    }
 }
 
