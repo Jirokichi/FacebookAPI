@@ -29,7 +29,8 @@ struct FBMessage{
                 "userImageUrl":self.fromUser.url as NSString
             ]
             
-            let fileName = "\(self.createdTime.timeIntervalSince1970)_\(hasPicture)_\(self.messageId).json"
+            LogUtil.log()
+            let fileName = "\(self.messageId)_\(hasPicture).json"
             let data = try JsonUtil.getJsonData(dict)
             try FileUtil(folderName: folderName).saveData(data, fileName: fileName, overWrite:overWrite)
         }
