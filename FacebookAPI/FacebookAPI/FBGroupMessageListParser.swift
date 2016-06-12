@@ -17,7 +17,7 @@ struct FBMessage{
     let fromUser:(name:String, id:String, url:String)
     
     /// メッセージがある場合のみファイルを作成
-    func createFile(folderName:[String], imagesFileName:[String], overWrite:Bool = false) throws{
+    func createFile(folderName:[String], fileName:String, imagesFileName:[String], overWrite:Bool = false) throws{
         let message = self.message ?? ""
         let dict = [
             "message":message as NSString,
@@ -30,7 +30,7 @@ struct FBMessage{
         ]
         
         LogUtil.log()
-        let fileName = "\(self.messageId)_\(hasPicture).json"
+//        let fileName = "\(self.messageId)_\(hasPicture).json"
         let data = try JsonUtil.getJsonData(dict)
         try FileUtil(folderName: folderName).saveData(data, fileName: fileName, overWrite:overWrite)
         

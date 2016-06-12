@@ -207,7 +207,18 @@ class ViewController: NSViewController {
                 self.processInFail(error)
             }else{
                 // メッセージの保存
-                messages.forEach({ (fbmsg) -> () in
+                var num = 0
+                
+                let sortedMessages:[FBMessage]
+                sortedMessages = messages.sort({ (a, b) -> Bool in
+                    if b.createdTime.compare(a.createdTime) == NSComparisonResult.OrderedAscending {
+                        return true
+                    }else{
+                        return false
+                    }
+                })
+                
+                sortedMessages.forEach({ (fbmsg) -> () in
                     do{
                         
                         // 対応するファイルパスを取得
@@ -218,7 +229,9 @@ class ViewController: NSViewController {
                             }
                         }
                         
-                        try fbmsg.createFile([ViewController.FolderName + "_" + group.groupId, "Messages"], imagesFileName: imagesFileName)
+                        let folderName = [ViewController.FolderName + "_" + group.groupId, "Messages"]
+                        try fbmsg.createFile(folderName, fileName:"\(num).json", imagesFileName: imagesFileName)
+                        num = num + 1
                     }catch{
                         LogUtil.log(error)
                         LogUtil.log(fbmsg.messageId)

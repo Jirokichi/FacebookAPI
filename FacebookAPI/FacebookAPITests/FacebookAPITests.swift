@@ -14,7 +14,7 @@ class FacebookAPITests: XCTestCase {
     
     
     
-    static let SharedAccessToken = ""
+    static let SharedAccessToken = "EAAKkj1obEnwBAPZAJNKWQMJnrKbc3GZC8ykoGSRiwC1Uod4sMNfTZB93ExTPMZAPvHReYvuQXRq2ZAjk3AavbPDEbAWrfPfMszuQZBzdZCG1nYX5YFOW2VpXMRNqwHmncLyp4w5vhvRY06vvGVj9UQom7ZBPBU0fOEQZD"
     
     override func setUp() {
         super.setUp()
